@@ -1,0 +1,36 @@
+{
+  "name": "apc",
+  "version": "1.0.0",
+  "description": "html template",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Alexander Samoylov (smlwmy@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "handlebars-layouts": "^3.1.4",
+    "hoek": "^5.0.3",
+    "materialize-css": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-wrap": "^0.13.0"
+  }
+}
