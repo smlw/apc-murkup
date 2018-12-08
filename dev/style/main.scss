@@ -2,7 +2,7 @@
 @import "core/_breakpoints";
 @import "_general";
 @import "core/fonts";
-@import "../../node_modules/materialize-css/sass/materialize.scss"
-
 
 // Import components styles of pages
+@import "app/main_page/main_page";
+@import "app/header";
