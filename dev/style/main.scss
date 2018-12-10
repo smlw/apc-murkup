@@ -4,5 +4,9 @@
 @import "core/fonts";
 
 // Import components styles of pages
+@import "app/main_page/card";
+
+//Main page
 @import "app/main_page/main_page";
 @import "app/header";
+@import "app/main_page/benefits"

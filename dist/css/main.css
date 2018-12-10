@@ -86,6 +86,10 @@ h6 {
   letter-spacing: 0;
   font-weight: normal; }
 
+svg {
+  width: 48px;
+  height: 48px; }
+
 @media (min-width: 70em) {
   h2 {
     font-size: 1.6rem; }
@@ -99,5 +103,16 @@ h6 {
   h6 {
     font-size: 1.1rem; } }
 
+.card-body {
+  text-align: center; }
+
 .header .navbar {
   background: #e3f2fd; }
+
+.benefits h2 {
+  text-align: center;
+  margin: 20px; }
+
+@media (min-width: 37.5em) {
+  .benefits {
+    margin: 60px 0; } }

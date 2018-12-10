@@ -109,6 +109,11 @@ h6 {
   font-weight: normal;
 }
 
+svg{
+  width: 48px;
+  height: 48px;
+}
+
 @include breakpoint(desktop) {
   h2 {
     font-size: 1.6rem;

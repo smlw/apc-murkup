@@ -105,15 +105,15 @@ gulp.task('image', function () {
 
 gulp.task('fonts', function() {
     gulp.src(route.src.fonts)
-        .pipe(gulp.dest(route.build.fonts))
+        .pipe(gulp.dest(route.build.fonts)) 
 });
 
 gulp.task('build', [
     'html',
     'js',
     'style',
-    'fonts',
-    'image'
+    'fonts'
+    // 'image'
 ]);
 
 gulp.task('webserver', function () {

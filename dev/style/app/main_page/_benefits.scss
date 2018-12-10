@@ -1,0 +1,9 @@
+.benefits{
+    h2{
+        text-align: center; 
+        margin: $freeSpace;
+    }
+    @include breakpoint(phablet){
+        margin: 60px 0;
+    }
+}
