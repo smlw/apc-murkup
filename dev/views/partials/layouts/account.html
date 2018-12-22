@@ -1,10 +1,14 @@
-<div class="container">
-    <div class="row">
-        <div class="col-3">
-            {{> chunks/account/acc-menu}}
-        </div>
-        <div class="col-9">
-            {{> chunks/account/acc-content}}
+<div class="account">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                {{> chunks/account/acc-menu}}
+            </div>
+            <div class="col-12 col-lg-9 d-flex align-self-stretch">
+                <div class="account-content">
+                    {{> chunks/account/acc-content}}
+                </div>
+            </div>
         </div>
     </div>
 </div>

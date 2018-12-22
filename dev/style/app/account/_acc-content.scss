@@ -1,0 +1,13 @@
+.account-content{
+    &-item{
+        &__line{
+            padding: 15px 0;
+            &_label{
+                width: 145px;
+            }
+            &_actions{
+                width: 100%;
+            }
+        }
+    }
+}
