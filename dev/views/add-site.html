@@ -1,17 +1,18 @@
 {{#extend "layouts/base"}}
-
 {{#content "title"}}
-Account page
+Add site
 {{/content}}
 
 {{#content "content"}}
+<div class="bs-stepper vertical linear">
     {{#extend "layouts/lk-layout"}}
         {{#content "lk-menu"}}
-            {{> chunks/account/acc-menu}}
+        {{> chunks/add-site/add-menu}}
         {{/content}}
         {{#content "lk-content"}}
-            {{> chunks/account/acc-content}}
+        {{> chunks/add-site/add-content}}
         {{/content}}
     {{/extend}}
+</div>
 {{/content}}
 {{/extend}}
