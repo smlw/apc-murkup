@@ -1,5 +1,7 @@
 // Import JS
 
 
-//= partials/popper.min.js
-//= partials/bootstrap.min.js
+//= partials/bs/popper.min.js
+//= partials/bs/bootstrap.min.js
+//= partials/popovers.js
+//= partials/settings.js
