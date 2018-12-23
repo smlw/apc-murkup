@@ -410,8 +410,6 @@ footer {
   .bs-stepper .bs-stepper-content {
     overflow: hidden;
     padding: 0 24px 24px 24px; }
-  .bs-stepper.vertical .bs-stepper-content {
-    padding: 0 0 0 48px; }
   .bs-stepper .step {
     display: -ms-flexbox;
     display: -webkit-box;
