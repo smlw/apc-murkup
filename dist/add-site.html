@@ -77,31 +77,78 @@
             </div>
             <div class="col-12 col-lg-9 d-flex align-self-stretch">
                 <div class="account-content">
-                            
-                <div class="bs-stepper-content">
-                    <form onsubmit="return false">
-                        <div id="test-vl-1" role="tabpanel" class="content active" aria-labelledby="stepper4trigger1">
-                            <div class="form-group">
-                                <label for="exampleInputEmailV1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmailV1" placeholder="Enter email">
-                            </div>
-                            <button class="btn btn-primary btn-next">Next</button>
+                            <div class="bs-stepper-content">
+            <form onsubmit="return false">
+                <div id="test-vl-1" role="tabpanel" class="content active" aria-labelledby="stepper4trigger1">
+                    <h2>Подтверждение прав на <a href="http://domain-name.ru">http://domain-name.ru</a></h2>
+                    <br>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#item_1">Мета-тег</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#item_2">HTML-файл</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#item_3">JSON-файл</a>
+                        </li>
+                    </ul>
+        
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div id="item_1" class="container tab-pane active"><br>
+                            <p>Добавьте в код главной страницы вашего сайта (в раздел head) мета-тег:</p>
+                            <blockquote class="blockquote">
+                                <code>&lt;meta name="yandex-verification" content="26773ea554023e11" /&gt;</code>
+                            </blockquote>
+                            <p>Зайдите на главную страницу сайта и убедитесь, что мета-тег появился в html-коде страницы. В
+                                большинстве браузеров это можно сделать выбрав пункт «Исходный код страницы» в контекстном
+                                меню. На некоторых сайтах обновление мета-тегов может занимать несколько минут!
+                                Нажмите кнопку «Проверить» после того, как мета-тег появится.</p>
                         </div>
-                        <div id="test-vl-2" role="tabpanel" class="content" aria-labelledby="stepper4trigger2">
-                            <div class="form-group">
-                                <label for="exampleInputPasswordV1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPasswordV1" placeholder="Password">
-                            </div>
-                            <button class="btn btn-primary btn-prev">Previous</button>
-                            <button class="btn btn-primary btn-next">Next</button>
+                        <div id="item_2" class="container tab-pane fade"><br>
+                            <p>В корне сайта создайте файл с именем <a href="#">yandex_26773ea554023e11.html</a>  и со следующим содержимым:</p>
+                            <blockquote class="blockquote">
+                                <code>
+                                    &lt;html&gt; 
+                                        &lt;head&gt; 
+                                            &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt; 
+                                        &lt;/head&gt; 
+                                    &lt;body&gt;Verification: 26773ea554023e11&lt;/body&gt; 
+                                    &lt;/html&gt;
+                                </code>
+                            </blockquote>
+                            <p>Убедитесь, что файл по адресу <a href="http://www.apc.ru/yandex_26773ea554023e11.html ">http://www.apc.ru/yandex_26773ea554023e11.html </a> открывается</p>
                         </div>
-                        <div id="test-vl-3" role="tabpanel" class="content" aria-labelledby="stepper4trigger3">
-                            <button class="btn btn-primary mt-5 btn-prev">Previous</button>
-                            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                        <div id="item_3" class="container tab-pane fade"><br>
+                            <p>В корне сайта создайте файл с именем yandex_26773ea554023e11.json и со следующим содержимым:</p>
+                            <blockquote class="blockquote">
+                                <code>
+                                    {
+                                        "domain": "http://apc.ru",
+                                        "secret": "random string"
+                                    }
+                                </code>
+                            </blockquote>
+                            <p>Убедитесь, что файл по адресу <a href="http://www.apc.ru/yandex_26773ea554023e11.json ">http://www.apc.ru/yandex_26773ea554023e11.json </a> открывается</p>
                         </div>
-                    </form>
+                    </div>
+                    <button class="btn btn-primary">Проверить</button>
                 </div>
-            </div>
+                <div id="test-vl-2" role="tabpanel" class="content" aria-labelledby="stepper4trigger2">
+                    <div class="form-group">
+                        <label for="exampleInputPasswordV1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPasswordV1" placeholder="Password">
+                    </div>
+                    <button class="btn btn-primary btn-prev">Previous</button>
+                    <button class="btn btn-primary btn-next">Next</button>
+                </div>
+                <div id="test-vl-3" role="tabpanel" class="content" aria-labelledby="stepper4trigger3">
+                    <button class="btn btn-primary mt-5 btn-prev">Previous</button>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </div>
+            </form>
         </div>
                 </div>
             </div>
