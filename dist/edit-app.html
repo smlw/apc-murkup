@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Edit app
+</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css"/></head>
+<body>
+
+<div class="main-content--wrap">
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">APC</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Как это работает?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Конфиденциальность</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Возможности</a>
+              </li>
+            </ul>
+            <a class="btn btn-primary active" href="#" role="button">Личный кабинет</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="content"><!-- dynamic content of every page -->
+
+        <div class="account">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                            <div class="list-group" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action active" data-toggle="list" href="#edit-main" role="tab">Общее</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#edit-db" role="tab">База данных</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#edit-stats" role="tab">Статистика</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#edit-logs" role="tab">Логи</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success">Добавить сайт</button>
+            </div>
+            </div>
+            <div class="col-12 col-lg-9 d-flex align-self-stretch">
+                <div class="account-content">
+                                <div class="tab-content">
+                <div class="tab-pane active" id="edit-main" role="tabpanel">
+                    <h2>Настройки сайта <a href="http://mysite.ru">http://mysite.ru</a></h2>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Домен:</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data"><a href="http://mysite.ru">http://mysite.ru</a></div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Статус APC:</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">Активно</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Статус соединения с БД:</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">ОК</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Тест соединения</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Количество юзеров:</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Последние действия:</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">01.01.2018 01PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="edit-db" role="tabpanel">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputAddress">Host</label>
+                            <input class="form-control" type="text" placeholder="http://my-site.ru" readonly>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">User</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="User">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputZip">Имя таблицы с пользователями</label>
+                                <input type="text" class="form-control" id="inputZip" placeholder="users_table">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">DB type</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Mysql</option>
+                                    <option>Mssql</option>
+                                    <option>MongoDB</option>
+                                    <option>PostgreSQL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Тест соединения </button>
+                    </form>
+                    <hr>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Host</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">http://my-site.ru</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">User</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">**********</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">Password</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">**********</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">user_table</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">**********</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-content-item border-bottom">
+                        <div class="account-content-item__line d-flex justify-content-start">
+                            <div class="account-content-item__line_label">DB Type</div>
+                            <div class="account-content-item__line_actions d-flex justify-content-between">
+                                <div class="account-content-item__line_data">**********</div>
+                                <div class="account-content-item__line_action">
+                                    <a href="#">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="edit-stats" role="tabpanel">
+                    DISABLE
+                </div>
+                <div class="tab-pane" id="edit-logs" role="tabpanel">
+                    DISABLE
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <footer class="border-top">
+        <h4> <a href="https://apc.ru">https://apc.ru</a> © 2018 all rights reserved</h4>
+    </footer></div>
+
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+</html>
