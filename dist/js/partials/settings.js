@@ -1,1 +1,0 @@
-"checked"!=$("#securityIsActive").attr("checked")&&$(".account-content_overlay").addClass("account-content_overlay-disable"),$("#securityIsActive").on("change",function(){this.checked?$(".account-content_overlay").removeClass("account-content_overlay-disable"):$(".account-content_overlay").addClass("account-content_overlay-disable")});
