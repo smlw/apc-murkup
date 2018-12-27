@@ -2,7 +2,7 @@
 
 var
 		gulp         = require('gulp'),
-		browserSync  = require('browser-sync'),
+        browserSync  = require('browser-sync'),
     	reload 		 = browserSync.reload,
         watch 		 = require('gulp-watch'),
 
@@ -90,6 +90,8 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(gulp.dest(route.build.js))
         .pipe(reload({stream: true}));
+
+    
 });
 
 gulp.task('image', function () {

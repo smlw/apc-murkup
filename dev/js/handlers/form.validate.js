@@ -1,3 +1,5 @@
+var registerApp = new RegisterApp();
+
 function regApp(elem) {
     var regForm = $('#register-app_form').validate({
         errorContainer: ".box-messages",
@@ -28,8 +30,9 @@ function regApp(elem) {
         if (validFlag) {
             registerApp.setDomainName(inputVal);
             $('.btn-contolls').find('.btn-next').addClass('d-block');
+            $('.result-message').append('<span class="text-success">OK</span>')
         } else {
-            $('.btn-contolls').find('.btn-next').removeClass('d-block')
+            $('.btn-contolls').find('.btn-next').removeClass('d-block');
         }
     }
 

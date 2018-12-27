@@ -1,4 +1,4 @@
-var RegisterApp = (function () {
+function RegisterApp() {
     var appObject = {
         domainName: '',
         checkRights: false,
@@ -11,27 +11,28 @@ var RegisterApp = (function () {
             DBtype: ''
         }
     };
-    return { // методы доступные извне
-      
-        // SETTERS
-        setDomainName: function (domainLink) {
-            appObject.domainName = domainLink;
-        },
-        setRights: function() {
-            appObject.checkRights = true;
-        },
-        setDBData: function(user,password,port,tableUsers,DBtype){
-            appObject.DBData.user = user;
-            appObject.DBData.password = password;
-            appObject.DBData.port = port;
-            appObject.DBData.tableUsers = tableUsers;
-            appObject.DBData.DBtype = DBtype;
-        },
 
-        // GETTERS
-        getAppObject: function(){
-            return appObject;
-        }
-    }
+    // SETTERS
+    this.setDomainName = function (domainLink) {
+        appObject.domainName = domainLink;
+        return true
+    };
+    this.setRights = function () {
+        appObject.checkRights = true;
+        return true;
+    };
+    this.setDBData = function (user, password, port, tableUsers, DBtype) {
+        appObject.DBData.user = user;
+        appObject.DBData.password = password;
+        appObject.DBData.port = port;
+        appObject.DBData.tableUsers = tableUsers;
+        appObject.DBData.DBtype = DBtype;
+        return true;
+    };
 
-}(RegisterApp));
+    // GETTERS
+    this.getAppObject = function () {
+        return appObject;
+    };
+
+};
