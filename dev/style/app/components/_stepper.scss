@@ -4,17 +4,20 @@
  * Licensed under MIT (https://github.com/Johann-S/bs-stepper/blob/master/LICENSE)
  */
 
- .bs-stepper {
+.bs-stepper {
   display: block;
   width: 100%;
+
   &.vertical {
     display: -ms-flexbox;
     display: flex;
   }
+
   .bs-stepper-header {
 
     display: none;
-    @include breakpoint(laptop){
+
+    @include breakpoint(laptop) {
       display: block;
       white-space: nowrap;
       display: -ms-flexbox;
@@ -23,16 +26,19 @@
       align-items: center;
     }
   }
+
   &.vertical .bs-stepper-header {
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: start;
     align-items: flex-start;
   }
+
   .bs-stepper-content {
     overflow: hidden;
     padding: 0 24px 24px 24px;
   }
+
   .step {
     display: -ms-flexbox;
     display: flex;
@@ -45,57 +51,73 @@
     box-sizing: content-box;
     -webkit-tap-highlight-color: transparent;
   }
+
   &.vertical .step {
     width: 100%;
     padding: 0 12px;
   }
+
   .step {
     &.active .bs-stepper-circle {
       background-color: #007bff;
     }
+
     &:hover {
-      .step-trigger:not(:disabled), a:not(:disabled), button:not(:disabled) {
+
+      .step-trigger:not(:disabled),
+      a:not(:disabled),
+      button:not(:disabled) {
         background-color: rgba(0, 0, 0, 0.06);
         cursor: pointer;
         text-decoration: none;
       }
     }
   }
+
   .content {
     &.dstepper-block {
       display: block;
     }
+
     &.dstepper-none {
       display: none;
     }
   }
+
   &.vertical .content.fade.dstepper-none {
     visibility: hidden;
   }
+
   .content {
     &:not(.fade) {
       display: none;
     }
+
     &.active:not(.fade) {
       display: block;
     }
+
     &.fade {
       visibility: hidden;
       transition-duration: .3s;
       transition-property: opacity;
     }
   }
+
   &.vertical .content {
     visibility: hidden;
     display: inherit;
   }
+
   .content.fade.active {
     visibility: visible;
     opacity: 1;
   }
+
   &.vertical .content.active {
     visibility: visible;
   }
+
   .bs-stepper-circle {
     display: inline-block;
     color: #fff;
@@ -107,26 +129,41 @@
     line-height: 29px;
     background-color: #6c757d;
   }
+
   .step {
-    .step-trigger, a, button {
+
+    .step-trigger,
+    a,
+    button {
       text-align: center;
       text-decoration: none;
       padding: 24px;
     }
-    .step-trigger:focus, a:focus, button:focus {
+
+    .step-trigger:focus,
+    a:focus,
+    button:focus {
       text-decoration: none;
     }
-    .step-trigger .bs-stepper-label, a .bs-stepper-label, button .bs-stepper-label {
+
+    .step-trigger .bs-stepper-label,
+    a .bs-stepper-label,
+    button .bs-stepper-label {
       font-weight: 600;
       color: #212529;
       display: inline-block;
     }
   }
+
   &.linear .step:not(.active) {
-    .step-trigger .bs-stepper-label, a .bs-stepper-label, button .bs-stepper-label {
+
+    .step-trigger .bs-stepper-label,
+    a .bs-stepper-label,
+    button .bs-stepper-label {
       color: rgba(0, 0, 0, 0.38);
     }
   }
+
   .line {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     -ms-flex: auto;
@@ -134,6 +171,7 @@
     height: 0;
     min-width: 32px;
   }
+
   &.vertical .line {
     min-height: 32px;
     width: 0;
@@ -149,16 +187,19 @@
   .bs-stepper:not(.vertical) {
     display: -ms-flexbox;
     display: flex;
+
     .bs-stepper-header {
       -ms-flex-direction: column;
       flex-direction: column;
       -ms-flex-align: start;
       align-items: flex-start;
     }
+
     .step {
       width: 100%;
       padding: 0 12px;
     }
+
     .line {
       min-height: 32px;
       width: 0;
@@ -168,11 +209,14 @@
       margin-right: auto;
       margin-left: auto;
     }
+
     .content {
       &.active {
         visibility: visible;
       }
-      &:not(.active), &:not(.fade):not(.active) {
+
+      &:not(.active),
+      &:not(.fade):not(.active) {
         visibility: hidden;
         display: unset;
       }

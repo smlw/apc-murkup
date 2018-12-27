@@ -7,7 +7,6 @@
 </title>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/main.css"/></head>
@@ -80,17 +79,19 @@
                                 <span class="bs-stepper-label">Готово</span>
                             </button>
                         </div>
-                    </div>    <div class="bs-stepper-content">
-                        <form onsubmit="return false">
+                    </div>    <div class="bs-stepper-content" id="regAppForm">
+                        <form onsubmit="return false" id="register-app_form">
                             <div id="test-l-1" role="tabpanel" class="content active" aria-labelledby="stepper1trigger1">
                                 <h2>Зарегистрировать сайт</h2>
                                 <div class="form-group">
-                                    <label for="siteName">Ссылка на сайт</label>
-                                    <input type="text" class="form-control" id="siteName" placeholder="http://site.ru">
+                                    <label for="url">Ссылка на сайт</label>
+                                    <input type="url" name="formDomainName" class="form-control" id="formDomainName" placeholder="http://domainname.ru">
+                                    <div class="box-messages">  </div>
                                 </div>
-                                <button class="btn btn-primary">Отправить</button>                <button class="btn btn-primary btn-prev">Previous</button>
-                                <button type="submit" class="btn btn-primary btn-next">next</button>
-                            </div>
+                                <div class="btn-contolls d-flex justify-content-start">
+                                    <button class="btn btn-primary btnCheckDomainName" data-action="checkDomainName">Отправить</button>
+                                    <button type="submit" class="btn btn-success btn-next d-none">Далее</button>
+                                </div>            </div>
                             <div id="test-l-2" role="tabpanel" class="content" aria-labelledby="stepper1trigger2">
                                 <h2>Подтверждение прав на <a href="http://domain-name.ru">http://domain-name.ru</a></h2>
                                 <!-- Nav tabs -->
@@ -162,30 +163,32 @@
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse perferendis amet distinctio asperiores
                                     eum dolores. Facilis, ad culpa! Neque culpa minus, sequi ad eaque voluptas rerum recusandae hic optio
                                     similique.</p>
-                                <form>
+                                
+                                <div class="step_3">
                                     <div class="form-group">
                                         <label for="inputAddress">Host</label>
-                                        <input class="form-control" type="text" placeholder="http://my-site.ru" readonly>
+                                        <input class="form-control" type="text" placeholder="http://domainname.ru" readonly>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputEmail4">User</label>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="User">
+                                            <label for="step_3-user">User</label>
+                                            <input type="text" class="form-control" id="step_3-user" placeholder="User" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Password</label>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                            <label for="step_3-password">Password</label>
+                                            <input type="password" class="form-control" id="step_3-password" placeholder="Password" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputZip">Имя таблицы с пользователями</label>
-                                            <input type="text" class="form-control" id="inputZip" placeholder="users_table">
+                                            <label for="step_3-table-name">Имя таблицы с пользователями</label>
+                                            <input type="text" class="form-control" id="step_3-table-name" placeholder="users_table" required >
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputState">DB type</label>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>Mysql</option>
+                                            <label for="step_3-db-type">DB type</label>
+                                            <select id="step_3-db-type" class="form-control" required>
+                                                <option>Не выбрано</option>
+                                                <option>Mysql</option>
                                                 <option>Mssql</option>
                                                 <option>MongoDB</option>
                                                 <option>PostgreSQL</option>
@@ -193,7 +196,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Тест соединения </button>
-                                </form>                <button class="btn btn-primary btn-prev">Previous</button>
+                                </div>                <button class="btn btn-primary btn-prev">Previous</button>
                                 <button type="submit" class="btn btn-primary btn-next">next</button>
                             </div>
                             <div id="test-l-4" role="tabpanel" class="content" aria-labelledby="stepper1trigger4">
@@ -220,7 +223,6 @@
     </footer></div>
 
 
-<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
 </body>

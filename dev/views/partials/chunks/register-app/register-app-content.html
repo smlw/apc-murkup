@@ -1,12 +1,10 @@
 <h1 class="display-6 container-header">Регистрация Вашего приложения</h1>
 <div id="stepper1" class="bs-stepper linear">
     {{> chunks/register-app/partials/reg/header}}
-    <div class="bs-stepper-content">
-        <form onsubmit="return false">
+    <div class="bs-stepper-content" id="regAppForm">
+        <form onsubmit="return false" id="register-app_form">
             <div id="test-l-1" role="tabpanel" class="content active" aria-labelledby="stepper1trigger1">
                 {{> chunks/register-app/partials/reg/step_1}}
-                <button class="btn btn-primary btn-prev">Previous</button>
-                <button type="submit" class="btn btn-primary btn-next">next</button>
             </div>
             <div id="test-l-2" role="tabpanel" class="content" aria-labelledby="stepper1trigger2">
                 {{> chunks/register-app/partials/reg/step_2}}

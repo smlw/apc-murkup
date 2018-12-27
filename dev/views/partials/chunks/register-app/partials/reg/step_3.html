@@ -2,30 +2,32 @@
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse perferendis amet distinctio asperiores
     eum dolores. Facilis, ad culpa! Neque culpa minus, sequi ad eaque voluptas rerum recusandae hic optio
     similique.</p>
-<form>
+
+<div class="step_3">
     <div class="form-group">
         <label for="inputAddress">Host</label>
-        <input class="form-control" type="text" placeholder="http://my-site.ru" readonly>
+        <input class="form-control" type="text" placeholder="http://domainname.ru" readonly>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputEmail4">User</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="User">
+            <label for="step_3-user">User</label>
+            <input type="text" class="form-control" id="step_3-user" placeholder="User" required>
         </div>
         <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            <label for="step_3-password">Password</label>
+            <input type="password" class="form-control" id="step_3-password" placeholder="Password" required>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputZip">Имя таблицы с пользователями</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="users_table">
+            <label for="step_3-table-name">Имя таблицы с пользователями</label>
+            <input type="text" class="form-control" id="step_3-table-name" placeholder="users_table" required >
         </div>
         <div class="form-group col-md-6">
-            <label for="inputState">DB type</label>
-            <select id="inputState" class="form-control">
-                <option selected>Mysql</option>
+            <label for="step_3-db-type">DB type</label>
+            <select id="step_3-db-type" class="form-control" required>
+                <option>Не выбрано</option>
+                <option>Mysql</option>
                 <option>Mssql</option>
                 <option>MongoDB</option>
                 <option>PostgreSQL</option>
@@ -33,4 +35,4 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Тест соединения </button>
-</form>
+</div>
