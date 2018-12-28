@@ -1,27 +1,73 @@
 var registerApp = new RegisterApp();
 
+// jQuery.validator.addMethod("domain", function (value, element) {
+    
+//     return this.optional(element) || /(http:|https:)\/\/(www\.)?(\w|\d)+.+?\/gi/.test(value);
+// }, "Please specify the correct domain for your documents");
+
 function regApp(elem) {
     var regForm = $('#register-app_form').validate({
         errorContainer: ".box-messages",
         errorClass: "text-danger",
+
         rules: {
-            formDomainName: {
+            "formDomainName": {
+                required: true,
+                minlength: 6
+                // domain: true
+            },
+            "step_3-user": {
+                required: true,
+                minlength: 4
+            },
+            "step_3-password": {
+                required: true,
+                minlength: 8
+            },
+            "step_3-table-name": {
+                required: true,
+                minlength: 2
+            },
+            "step_3-db-port": {
+                minlength: 2
+            },
+            "step_3-db-type": {
                 required: true
             }
         },
         messages: {
-            formDomainName: {
+            "formDomainName": {
                 required: "Пожалуйста, введите ссылку на ресурс вида http://domainname.ru/",
                 url: 'Пожалуйста, введите корректный адрес'
-            }
+            },
+            "step_3-user": {
+                required: "Пользователь базы данных",
+            },
+            "step_3-password": {
+                required: "Пароль пользователя базы данных",
+                minlength: "Минимальная длина от 8 символов"
+            },
+            "step_3-table-name": {
+                required: "Имя таблицы содержащее пользователей",
+            },
+            "step_3-db-port": {
+                required: "Порт подключения"
+            },
+            "step_3-db-type": {
+                required: "Тип СУБД",
+            },
         }
     });
+
     var inputs = {
         domainName: '#formDomainName',
-        user: '#step_3-user',
-        password: '#step_3-password',
-        tableName: '#step_3-table-name',
-        dbType: '#step_3-db-type'
+        DBData: {
+            user: '#step_3-user',
+            password: '#step_3-password',
+            tableName: '#step_3-table-name',
+            port: '#step_3-db-port',
+            dbType: '#step_3-db-type'
+        }
     };
 
     this.checkDomainName = function () {
@@ -29,42 +75,57 @@ function regApp(elem) {
         var validFlag = regForm.element(inputs.domainName);
         if (validFlag) {
             registerApp.setDomainName(inputVal);
-            $('.btn-contolls').find('.btn-next').addClass('d-block');
-            $('.result-message').append('<span class="text-success">OK</span>');
+            $('.btn-contolls').find('.res-step-1').addClass('d-block');
+            $('.btn-contolls').find('.btnCheckDomainName').addClass('d-none');
+            $('.result-message-1').append('<span class="text-success">OK</span>');
             console.log(registerApp.getAppObject())
         } else {
-            $('.btn-contolls').find('.btn-next').removeClass('d-block');
+            $('.btn-contolls').find('.res-step-1').removeClass('d-block');
         }
     };
 
-    this.checkRights = function(){
+    this.checkRights = function () {
         var data = {
             url: registerApp.getAppObject().domainName,
             secretKey: registerApp.getAppObject().secretKey
         };
 
-        console.log(data)
+        registerApp.setRights();
+        console.log(registerApp.getAppObject())
+        
+        var rightsFlag = registerApp.getAppObject().checkRights;
+        if(rightsFlag){
+            $('.result-message-2').append('<span class="text-success">OK</span>');
+            $('.btn-contolls').find('.btnCheckRights').addClass('d-none');
+            $('.btn-contolls').find('.res-step-2').addClass('d-block');
+        }
 
-        $.ajax({
-            type: 'POST',
-            data: JSON.stringify(data),
-            contentType: 'application/json',
-            url: '/registerApp'
-        }).done(function (data) {
-            console.log(data);
+        // Тут обработчик и запрос на сервер    
+    };
 
-            if (!data.ok) {
-                console.log(false)
-                console.log(data.error);
-            } else {
-                console.log(true)
-                var rightsFlag = registerApp.getAppObject().checkRights;
-                if(rightsFlag){
-                    registerApp.setRights();
-                    $('.result-message').append('<span class="text-success">OK</span>');
-                }
-            }
-        });
+    this.checkDBData = function () {
+        var user = $(inputs.DBData.user).val();
+        var password = $(inputs.DBData.password).val();
+        var tableName = $(inputs.DBData.tableName).val();
+        var port = $(inputs.DBData.port).val();
+        var dbType = $(inputs.DBData.dbType).val();
+
+        var data = {
+            user: user,
+            password: password,
+            tableName: tableName,
+            port: port || '',
+            DBtype: dbType
+        }
+
+        registerApp.setDBData(data.user, data.password, data.port, data.tableName, data.DBtype);
+        $('.result-message-3').append('<span class="text-success">OK</span>');
+        $('.btn-contolls').find('.btncheckDBData').addClass('d-none');
+        $('.btn-contolls').find('.res-step-3').addClass('d-block');
+
+        console.log(registerApp.getAppObject())
+
+        // Тут обработчик и запрос на сервер
     };
 
     var self = this;

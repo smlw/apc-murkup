@@ -82,8 +82,6 @@ gulp.task('style', function () {
 });
 
 gulp.task('js', function () {
-    gulp.src('./node_modules/jquery/dist/jquery.min.js')
-        .pipe(gulp.dest('./dist/js'));
 
     gulp.src(route.src.js)
         .pipe(rigger())
@@ -91,7 +89,6 @@ gulp.task('js', function () {
         .pipe(gulp.dest(route.build.js))
         .pipe(reload({stream: true}));
 
-    
 });
 
 gulp.task('image', function () {

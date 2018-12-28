@@ -8,11 +8,10 @@ function RegisterApp() {
         domainName: '',
         checkRights: false,
         DBData: {
-            host: this.domainName,
             user: '',
             password: '',
             port: '',
-            tableUsers: '',
+            tableName: '',
             DBtype: ''
         }
     };
@@ -26,11 +25,11 @@ function RegisterApp() {
         appObject.checkRights = true;
         return true;
     };
-    this.setDBData = function (user, password, port, tableUsers, DBtype) {
+    this.setDBData = function (user, password, port, tableName, DBtype) {
         appObject.DBData.user = user;
         appObject.DBData.password = password;
         appObject.DBData.port = port;
-        appObject.DBData.tableUsers = tableUsers;
+        appObject.DBData.tableName = tableName;
         appObject.DBData.DBtype = DBtype;
         return true;
     };
