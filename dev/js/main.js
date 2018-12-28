@@ -9,5 +9,10 @@
 //= partials/libs/bs-stepper.min.js
 //= partials/account.js
 //= partials/viewRegisterApp.js
-//= handlers/register-app.js
-//= handlers/form.validate.js
+//= partials/viewAccountSettings.js
+
+//= handlers/registerApp/register-app.js
+//= handlers/registerApp/form.validate.js
+
+//= handlers/editSettings/edit-settings.js
+//= handlers/editSettings/form.validate.js
