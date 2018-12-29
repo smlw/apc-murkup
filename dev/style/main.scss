@@ -23,10 +23,12 @@
 //Register App page
 @import "app/register-app/register-app";
 
+//Auth 
+@import "app/auth/auth";
+
 // Footer
 @import "app/footer";
 
 // Compontents
 @import "app/components/switch";
 @import "app/components/stepper";
-@import "app/components/reg-form";

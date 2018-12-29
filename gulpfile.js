@@ -100,7 +100,7 @@ gulp.task('image', function () {
         }))
         .pipe(gulp.dest(route.build.img))
         .pipe(reload({stream: true}));
-});
+}); 
 
 gulp.task('fonts', function() {
     gulp.src(route.src.fonts)
@@ -111,8 +111,8 @@ gulp.task('build', [
     'html',
     'js',
     'style',
-    'fonts'
-    // 'image'
+    'fonts',
+    'image'
 ]);
 
 gulp.task('webserver', function () {
